@@ -18,8 +18,12 @@ public class Programador extends Empleado{
 
     public Programador(String lenguaje, String nombre, double salario, int id) throws ExepcionNombre, ExepcionLenguaje, ExcepcionSalario {
         super(nombre, salario, id);
-        if(!"GO".equals(lenguaje))
+        if("GO".equals(lenguaje) || "Java".equals(lenguaje) ) {
+        } else {
             throw new ExepcionLenguaje();
+        }
+        
+            ;
         
         this.lenguaje = lenguaje;
     }
