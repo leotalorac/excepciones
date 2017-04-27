@@ -5,9 +5,11 @@
  */
 package archivo;
 
+//import com.sun.istack.internal.logging.Logger;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.util.Scanner;
 import modelo.*;
 
 /**
@@ -44,5 +46,56 @@ public class ArchivoDB {
         salida.close();
         
         
+    }
+    
+    public void imprimirInformacion(){
+        File archivo = new File("empresa.txt");
+        String tipo ="";
+        try{
+            Scanner lectura = new Scanner(archivo);
+            lectura.useDelimiter(",");
+            while(lectura.hasNext()){
+                tipo = lectura.next();
+                if (tipo.equals("C")) {
+                    System.out.println("Consultor");
+                    System.out.println("ID: " + lectura.nextInt());
+                    System.out.println("Labor: " + lectura.next());
+                }else if(tipo.equals("A")){
+                    System.out.println("Administrador");
+                    System.out.println("ID: " +lectura.nextInt());
+                    System.out.println("Nombre: " +lectura.next());
+                    System.out.println("Salario: " +lectura.next());
+                }
+                else if(tipo.equals("P")){
+                    System.out.println("Programador");
+                    System.out.println("ID: " +lectura.nextInt());
+                    System.out.println("Nombre: " +lectura.next());
+                    System.out.println("Salario: " +lectura.next());
+                    System.out.println("Lenguaje: " +lectura.next());
+                }
+                else if(tipo.equals("L")){
+                    System.out.println("Lider de proyecto");
+                    System.out.println("ID: " +lectura.nextInt());
+                    System.out.println("Nombre: " +lectura.next());
+                    System.out.println("Salario: " +lectura.next());
+                    System.out.println("Lenguaje: " +lectura.next());
+                    int w = lectura.nextInt();
+                    System.out.println(w);
+                    for (int i = 0; i < w; i++) {
+                        System.out.println("ID" +w +":"+ lectura.nextInt());
+                    }
+                    
+                }
+                    
+                    
+                //temporal
+                //System.out.println(lectura.next());
+            }
+            lectura.close();
+        }catch(FileNotFoundException ex){
+            //Logger.getLogger(ArchivoDB.class.getName()).log(Levi);
+            ex.printStackTrace();
+            
+        }
     }
 }

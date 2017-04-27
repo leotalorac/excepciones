@@ -20,7 +20,7 @@ public class EjercicioTaler {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args)  {
         Empresa apple = new Empresa();
         Consultor c = new Consultor("ing",1);
         apple.agregarTrabajador(c);
@@ -36,7 +36,7 @@ public class EjercicioTaler {
         
         Programador p = null;
         try{ 
-            p = new Programador("GO","Luis Edaurdo",2000000,3);
+            p = new Programador("GO","Luis Eduardo",2000000,3);
         }catch(ExepcionNombre e){
             e.printStackTrace();
         }catch(ExepcionLenguaje e){
@@ -66,6 +66,7 @@ public class EjercicioTaler {
         }catch(FileNotFoundException e){
             e.printStackTrace();
         }
+        imp.imprimirInformacion();
         
         
     }
