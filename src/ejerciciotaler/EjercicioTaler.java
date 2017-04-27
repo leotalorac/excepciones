@@ -48,7 +48,7 @@ public class EjercicioTaler {
                 
         LiderProyecto l = null;
         try{ 
-            l = new LiderProyecto("GO","Cristian Mantilla",2000000,3);
+            l = new LiderProyecto("GO","Cristian Mantilla",2000000,4);
         }catch(ExepcionNombre e){
             e.printStackTrace();
         }catch(ExepcionLenguaje e){
@@ -61,7 +61,11 @@ public class EjercicioTaler {
         apple.agregarTrabajador(l);
         
         ArchivoDB imp = new ArchivoDB();
-        imp.guardarInformacion(apple);
+        try{
+            imp.guardarInformacion(apple);
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+        }
         
         
     }

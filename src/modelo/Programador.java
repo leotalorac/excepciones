@@ -23,8 +23,6 @@ public class Programador extends Empleado{
             throw new ExepcionLenguaje();
         }
         
-            ;
-        
         this.lenguaje = lenguaje;
     }
     
