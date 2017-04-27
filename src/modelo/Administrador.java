@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import Excepciones.ExcepcionSalario;
 import Excepciones.ExepcionNombre;
 
 /**
@@ -14,7 +15,7 @@ import Excepciones.ExepcionNombre;
 public class Administrador extends Empleado{
 
     public Administrador(String nombre, int id) throws ExepcionNombre, ExcepcionSalario {
-        super(nombre, 100, id);
+        super(nombre, 1000000, id);
     }
     
     @Override

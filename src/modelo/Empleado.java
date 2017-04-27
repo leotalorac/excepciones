@@ -5,6 +5,7 @@
  */
 package modelo ;
 
+import Excepciones.ExcepcionSalario;
 import Excepciones.ExepcionNombre;
 
 

@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import Excepciones.ExcepcionSalario;
 import Excepciones.ExepcionLenguaje;
 import Excepciones.ExepcionNombre;
 import java.util.ArrayList;
