@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package modelo;
+package modelo ;
+
+import Excepciones.ExepcionNombre;
+
 
 /**
  *
@@ -25,6 +28,14 @@ public abstract class Empleado extends Trabajador{
         }
         this.nombre = nombre;
         this.salario = salario;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public double getSalario() {
+        return salario;
     }
    
 }

@@ -5,13 +5,15 @@
  */
 package modelo;
 
+import Excepciones.ExepcionNombre;
+
 /**
  *
  * @author Estudiante
  */
 public class Administrador extends Empleado{
 
-    public Administrador(String nombre, int id) {
+    public Administrador(String nombre, int id) throws ExepcionNombre, ExcepcionSalario {
         super(nombre, 100, id);
     }
     

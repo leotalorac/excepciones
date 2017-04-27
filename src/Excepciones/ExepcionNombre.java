@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package modelo;
+package Excepciones;
 
 /**
  *
  * @author Estudiante
  */
-public class ExepcionSalario {
-    
+public class ExepcionNombre extends Exception{
+    public ExepcionNombre(){
+        super("el nombre es muy largo");
+    }
 }

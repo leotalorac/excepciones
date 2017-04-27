@@ -36,5 +36,10 @@ public class Empresa {
         }
         return informacion;
     }
+
+    public ArrayList<Trabajador> getTrabajadores() {
+        return trabajadores;
+    }
+    
     
 }

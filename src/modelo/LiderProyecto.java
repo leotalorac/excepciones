@@ -5,6 +5,8 @@
  */
 package modelo;
 
+import Excepciones.ExepcionLenguaje;
+import Excepciones.ExepcionNombre;
 import java.util.ArrayList;
 
 /**
@@ -14,7 +16,7 @@ import java.util.ArrayList;
 public class LiderProyecto extends Programador{
     private ArrayList<Programador> programadores;
 
-    public LiderProyecto(String lenguaje, String nombre, double salario, int id) {
+    public LiderProyecto(String lenguaje, String nombre, double salario, int id) throws ExepcionNombre, ExepcionLenguaje, ExcepcionSalario {
         super(lenguaje, nombre, salario, id);
         this.programadores = new ArrayList<>();
     }
@@ -40,4 +42,12 @@ public class LiderProyecto extends Programador{
         }
        return informacion;
     }
+
+    public ArrayList<Programador> getProgramadores() {
+        return programadores;
+    }
+
+    
+    
+    
 }

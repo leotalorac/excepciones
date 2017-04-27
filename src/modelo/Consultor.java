@@ -26,5 +26,9 @@ public class Consultor extends Trabajador{
     public String listarInformacion() {
       return "Consultor " + this.id + " " + this.labor;    
     }
+
+    public String getLabor() {
+        return labor;
+    }
     
 }
